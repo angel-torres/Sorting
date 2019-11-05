@@ -13,12 +13,24 @@ def selection_sort( arr ):
 
 
 # TO-DO:  implement the Bubble Sort function below
-def bubble_sort( arr ):
-    i = 0
-    while i < len(arr):
-        print(arr[i])
-        i += 1
-    return arr
+def bubble_sort( array ):
+    # loop over list and compare current index to next index
+    # if current is greater than next -> flip numbers
+    # if there is a flip then set flip to true
+    # continue to loop over list until there are no flips
+    # return sorted list
+    flip = True 
+    while flip is True:
+        flips = 0
+        for i in range(0, len(array) - 1):
+            if array[i] > array[i + 1]:
+                curr_value = array[i]
+                array[i] = array[i + 1]
+                array[i + 1 ] = curr_value
+                flips += 1
+        if flips == 0:
+            flip = False
+    return array
 
 
 # STRETCH: implement the Count Sort function below
@@ -26,5 +38,5 @@ def count_sort( arr, maximum=-1 ):
 
     return arr
 
-array = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
-bubble_sort(array)
+array1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+print(bubble_sort(array1))
