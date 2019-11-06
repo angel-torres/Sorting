@@ -6,9 +6,10 @@ def selection_sort( arr ):
         for index in range(i, len(arr)): # iterate through right side of arr
             if arr[smallest_index] > arr[index]: # check if arr[index] is less than current smallest_indes
                 smallest_index = index # if it's less, set up new smallest index
-        cur_num = arr[i] # set reference to the current number 
-        arr[cur_index] = arr[smallest_index] # place smallest index at the curr index
-        arr[smallest_index] = cur_num # place curr index at the place where the smallest num was
+        #cur_num = arr[i] # set reference to the current number 
+        #arr[cur_index] = arr[smallest_index] # place smallest index at the curr index
+        #arr[smallest_index] = cur_num # place curr index at the place where the smallest num was
+        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
     return arr
 
 
