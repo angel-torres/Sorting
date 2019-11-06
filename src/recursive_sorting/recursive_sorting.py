@@ -32,10 +32,10 @@ def merge( arrA, arrB ):
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
-    if len(arr) == 1:
+    if len(arr) <= 1:
         return arr
-    arrA = arr[:round(len(arr)/2)]
-    arrB = arr[round(len(arr)/2):]
+    arrA = arr[:len(arr)//2]
+    arrB = arr[len(arr)//2:]
     return merge(merge_sort(arrA), merge_sort(arrB))
 
 
@@ -57,6 +57,7 @@ def timsort( arr ):
 
     return arr
 
-array1 = [ 2, 7, 9, 1, 8, 3, 6, 4, 0, 5,]  
-
-print(merge_sort(array1))
+arr1 = [ 2, 7, 9, 1, 8, 3, 6, 4, 0, 5,]  
+arr2 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+print(merge_sort(arr1))
+print(merge_sort(arr2))
